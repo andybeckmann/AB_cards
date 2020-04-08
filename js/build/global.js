@@ -4,8 +4,11 @@
  */
 
 function cardListNavigation(list) {
-	var cardNavigationButtonPrevious = document.getElementById('card-navigation-button-previous');
-	var cardNavigationButtonNext = document.getElementById('card-navigation-button-next');
+
+	'use strict';
+
+	let cardNavigationButtonPrevious = document.getElementById('card-navigation-button-previous');
+	let cardNavigationButtonNext = document.getElementById('card-navigation-button-next');
 
 	cardNavigationButtonPrevious.onmousedown = function () {
 	  document.getElementById(list).scrollLeft -= 125;
