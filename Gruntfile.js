@@ -38,6 +38,7 @@ module.exports = function(grunt) {
             options: {
                 eqnull: true,
                 eqeqeq: false,
+                esversion: 6,
             },
             beforeconcat: ['js/AB_cards.js']
         },
@@ -55,11 +56,11 @@ module.exports = function(grunt) {
 
         // -- Javascript Minification
 
-        uglify: {
-            build: {
-                src: 'js/build/global.js',
-                dest: 'js/build/global.min.js'
-            }
+        rollup: {
+            options: {},
+            files: {
+              'js/build/global.min.js': ['js/build/global.js'],
+            },
         },
 
         // -- Watch
@@ -68,7 +69,7 @@ module.exports = function(grunt) {
  
             scripts: {
                 files: ['js/*.js'],
-                tasks: ['jshint:beforeconcat','concat','uglify'],
+                tasks: ['jshint:beforeconcat','concat','rollup'],
                 options: {
                     spawn: false,
                 }
@@ -89,5 +90,5 @@ module.exports = function(grunt) {
 
     require('load-grunt-tasks')(grunt);
  
-    grunt.registerTask('default', ['jshint:beforeconcat','concat', 'uglify', 'dart-sass', 'cssmin', 'watch']);
+    grunt.registerTask('default', ['jshint:beforeconcat','concat', 'rollup', 'dart-sass', 'cssmin', 'watch']);
 };
