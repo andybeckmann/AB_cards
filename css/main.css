@@ -110,10 +110,12 @@ img {
   border: none;
   border-radius: 15px 0 0 15px;
   display: block;
+  box-sizing: border-box;
+  border: 3px solid #ccc;
 }
 .card-list-wrapper .card-navigation-wrapper button:focus {
   outline: none;
-  background: #fff;
+  border: 3px solid #999;
 }
 .card-list-wrapper .card-navigation-wrapper button svg.triangle {
   fill: #999;
@@ -124,10 +126,11 @@ img {
 .card-list-wrapper .card-navigation-wrapper button svg.triangle.previous {
   transform: rotate(-90deg);
 }
-.card-list-wrapper .card-navigation-wrapper button:focus {
+.card-list-wrapper .card-navigation-wrapper button:active {
   background: #2ecc40;
+  border: 3px solid #2ecc40;
 }
-.card-list-wrapper .card-navigation-wrapper button:focus svg.triangle {
+.card-list-wrapper .card-navigation-wrapper button:active svg.triangle {
   fill: #fff;
 }
 .card-list-wrapper .card-navigation-wrapper button#card-navigation-button-next {

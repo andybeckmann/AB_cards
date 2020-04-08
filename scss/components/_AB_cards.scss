@@ -118,10 +118,12 @@
 			border: none;
 			border-radius: 15px 0 0 15px;
 			display: block;
+			box-sizing: border-box;
+			border: 3px solid #ccc;
 
 			&:focus {
 				outline: none;
-				background: #fff;
+				border: 3px solid #999;
 			}
 
 			svg.triangle {
@@ -136,8 +138,9 @@
 			}
 		}
 
-		button:focus {
+		button:active {
 			background: colors.$green;
+			border: 3px solid colors.$green;
 
 			svg.triangle {
 				fill: #fff;
