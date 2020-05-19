@@ -48,8 +48,13 @@ img {
 }
 .card-list-wrapper ul#card-list li .item .item-header {
   background: #222;
+  padding-top: 50px;
+  color: #fff;
+  font-size: 84px;
+  text-align: center;
   min-height: 200px;
   width: 100%;
+  font-weight: bold;
 }
 .card-list-wrapper ul#card-list li .item .item-details {
   padding: 20px 30px;
