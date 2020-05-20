@@ -71,7 +71,7 @@ img {
   color: #111;
 }
 .card-list-wrapper ul#card-list li .item .item-details p {
-  font-size: 18x;
+  font-size: 18px;
   line-height: 27px;
   position: relative;
   z-index: 2;
